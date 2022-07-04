@@ -3,3 +3,5 @@ coverage/
 .settings/
 .sfdx/
 .vscode/
+
+.idea/
