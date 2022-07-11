@@ -1,3 +1,3 @@
-function min(a, b) {
-	return a > b ? a : b;
+let min = (a,b) => {
+	return a < b ? a : b;
 }
