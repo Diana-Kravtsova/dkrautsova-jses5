@@ -1,4 +1,4 @@
-let range = (start, end) => {
+function range(start, end) {
 	let array = [];
 	for (let i = start; i <= end; i++) {
 		array.push(i);
@@ -6,12 +6,9 @@ let range = (start, end) => {
 	return array;
 }
 
-let range = (start, end, step) => {
+//Modified version of range
+function range(start, end, step = 1) {
 	let array = [];
-	if (step === undefined) {
-		// If no step is given
-		step = 1;
-	}
 	while (step > 0 ? start <= end : start >= end) {
 		array.push(start);
 		start += step;
