@@ -1,3 +1,5 @@
-console.log(arrays.reduce((array, element) => {
-	return array.concat(element);
-}));
+function flatter(arrays){
+	return arrays.reduce((array, element) => {
+		return array.concat(element);
+	});
+}
