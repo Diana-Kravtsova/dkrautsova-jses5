@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<img src='../img/cat.png' id="cat" style="position: absolute">
+<img src='../img/hat.png' id="hat" style="position: absolute">
+<img src='../img/cat.png' id="cat2" style="position: absolute">
+<img src='../img/hat.png' id="hat2" style="position: absolute">
+<img src='../img/cat.png' id="cat3" style="position: absolute">
+<img src='../img/hat.png' id="hat3" style="position: absolute">
+
+<script>
+	let cat = document.querySelector("#cat");
+	let hat = document.querySelector("#hat");
+
+	let cat2 = document.querySelector("#cat2");
+	let hat2 = document.querySelector("#hat2");
+
+	let cat3 = document.querySelector("#cat3");
+	let hat3 = document.querySelector("#hat3");
+
+	// Set start state of images
+	let angle = 0;
+	let lastTime = null;
+
+	function animate(time) {
+		if (lastTime != null) {
+			angle += (time - lastTime) * 0.002;
+		}
+		lastTime = time;
+
+		// Orbit at opposite sides of the ellipse
+		cat.style.top = (Math.sin(angle + Math.PI) * 50 + 100) + 'px';
+		cat.style.left = (Math.cos(angle + Math.PI) * 200 + 220) + 'px';
+		hat.style.top = (Math.sin(angle) * 50 + 100) + 'px';
+		hat.style.left = (Math.cos(angle) * 200 + 220) + 'px';
+
+		// Hat circle around the cat
+		cat2.style.top = (Math.sin(1) * 100 + 400) + 'px';
+		cat2.style.left = (Math.cos(1) * 100 + 100) + 'px';
+		hat2.style.top = (Math.sin(angle) * 150 + 500) + 'px';
+		hat2.style.left = (Math.cos(angle) * 150 + 150) + 'px';
+
+		// Criss-cross
+		cat3.style.top = (Math.sin(-angle) * 100 + 150) + 'px';
+		cat3.style.left = (Math.sin(angle) * 100 + 800) + 'px';
+		hat3.style.top = (Math.cos(angle) * 100 + 150) + 'px';
+		hat3.style.left = (Math.cos(angle) * 100 + 800) + 'px';
+
+		requestAnimationFrame(animate);
+	}
+	requestAnimationFrame(animate);
+</script>
+</body>
+</html>
