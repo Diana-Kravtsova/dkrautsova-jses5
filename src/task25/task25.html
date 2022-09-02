@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<input type="text">
+<script>
+	let field = document.querySelector("input");
+	field.addEventListener("keydown", function (event) {
+		// Check for letters Q, W, X
+		if (event.keyCode === 81 ||
+			event.keyCode === 87 ||
+			event.keyCode === 88) {
+			event.preventDefault();
+		}
+	})
+</script>
+</body>
+</html>
