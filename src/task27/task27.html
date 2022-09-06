@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="task27.js"></script>
+    <style>
+        .enabled {
+            background-color: #d7b0ff;
+        }
+
+        .disabled {
+            background-color: #88bd8e;
+        }
+
+        button {
+            margin-right: 3px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div data-tabname="one">Tab one</div>
+    <div data-tabname="two">Tab two</div>
+    <div data-tabname="three">Tab three</div>
+</div>
+<script>
+	asTabs(document.querySelector("#wrapper"));
+</script>
+</body>
+</html>
