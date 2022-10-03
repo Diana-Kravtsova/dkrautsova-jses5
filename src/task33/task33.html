@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<textarea id="code">return "hi";</textarea>
+<button id="button">Run</button>
+<pre id="output"></pre>
+
+<script>
+	document.querySelector("#button").addEventListener("click", () => {
+		let code = document.querySelector("#code").value;
+		let output = document.querySelector("#output");
+		try {
+			output.innerText = new Function(code)();
+		} catch (e) {
+			output.innerText = "Error: " + e;
+		}
+	});
+</script>
+
+</body>
+</html>
