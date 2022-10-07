@@ -12,15 +12,15 @@ function autocompletion(input, suggestions) {
 		if (input.value) {
 			let matches = [];
 
-			// Push all current matches
+			// Push all current matches by includes
 			terms.forEach((term) => {
-				if (term.startsWith(input.value)) {
+				if (term.toLowerCase().includes(input.value.toLowerCase())) {
 					matches.push(term);
 				}
 			});
 
-			// Create node in suggestions node for each match
-			matches.forEach((match) => {
+			// Create node in sorted suggestions node for each match
+			matches.sort().forEach((match) => {
 				let field = document.createElement('div');
 
 				field.textContent = match;
