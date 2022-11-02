@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    background-color: #a2c4ae;
+}
+
+.main {
+    display: flex;
+}
+
+.menu {
+    width: 30%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.files {
+    width: 70%;
+    float: right;
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eeeeee;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #7aa990;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cbd9d1;
+}
+
+textarea {
+    height: 80vh;
+    width: 50vw;
+    background: #eeeeee;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    background: #7aa990;
+    padding: 10px 30px;
+    border: none;
+    transition: 0.3s;
+}
+
+button:active {
+    border: none;
+    background: #cbd9d1;
+    margin-top: 10px;
+}
+
+button:disabled {
+    border: none;
+    background: #9b9b9b;
+    margin-top: 10px;
+}
+
+select {
+    border: none;
+    max-height: 40vh;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+input {
+    border: none;
+    margin: 10px 0 0 10px;
+    padding-left: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex button {
+    width: 20vw;
+}
+
+.flex input {
+    max-width: 10vw;
+}
+
+.files {
+    padding: 10px;
+}
+
+.files div {
+    min-height: 18px;
+}

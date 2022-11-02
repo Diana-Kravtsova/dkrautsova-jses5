@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="main">
+  <div class='menu'>
+    <div id="path"></div>
+    <select id="select" size='2'></select>
+    <button id="back" disabled>Back</button>
+    <div class="flex">
+      <button id="createFile" disabled>Create file</button>
+      <input id="inputFile" type='text'>
+    </div>
+    <div class="flex">
+      <button id="createDir" disabled>Create directory</button>
+      <input id="inputDir" type='text'>
+    </div>
+    <button id="deleteFile" disabled>Delete file</button>
+    <button id="deleteDir" disabled>Delete directory</button>
+    <button id="save" disabled>Save file</button>
+  </div>
+  <div class="files">
+    <div id="file" class="file"></div>
+    <textarea id="text"></textarea>
+  </div>
+</div>
+<script type='text/javascript' src='main.js'></script>
+<script>
+  start();
+</script>
+</body>
+</html>
