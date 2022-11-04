@@ -10,6 +10,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "ssh://dkrautsova@gml-jbpm.gomel.iba.by:29418/dkrautsova-jses5"
@@ -17,7 +18,10 @@
   "author": "DH",
   "license": "ISC",
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "@types/mime": "^3.0.1",
+    "mime": "^3.0.0",
+    "xhr2": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",

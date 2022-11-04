@@ -39,10 +39,10 @@ function get(path, respond, request) {
 
 	// Exception for index.html, main.js and style.css
 	if (!type) {
-		if (path === './main.js' || path === './style.css' || path === './')
+		if (path === './task39.js' || path === './style.css' || path === './')
 			type = 'file';
 		if (path === './')
-			path += 'index.html';
+			path += 'task39.html';
 	}
 
 	// Check type
