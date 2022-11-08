@@ -119,8 +119,8 @@ function remove(path, respond) {
 			respond(204);
 
 		else if (stats.isDirectory())
-			// Check and remove path
-			fs.rmdir(path, function (err) {
+			// Check and remove path recursively
+			fs.rm(path, { recursive: true, force: true},function (err) {
 				checkError(err, respond, function () {
 					respond(200, 'The directory ' +
 						path + ' is successfully removed');

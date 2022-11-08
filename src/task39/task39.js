@@ -91,21 +91,28 @@ function addEvents(form) {
 	});
 
 	// Click a 'Delete file' button
-	form.deleteFile.addEventListener('click', function() {
-		remove(form.pathname + form.filename);
-		displayPath(form, getPath(form.pathname));
-		closeFile(form);
+	form.deleteFile.addEventListener('click', function () {
+		let result = confirm("Are you sure you want to delete this file?");
+		if (result) {
+			remove(form.pathname + form.filename);
+			displayPath(form, getPath(form.pathname));
+			closeFile(form);
+		}
 	});
 
 	// Click a 'Delete directory' button
-	form.deleteDir.addEventListener('click', function() {
-		remove(form.pathname);
-		form.pathname = form.pathname.slice(0, form.pathname.slice(0,
-			form.pathname.length - 1).lastIndexOf('/') + 1);
-		displayPath(form, getPath(form.pathname));
-		if (form.pathname === '/') {
-			form.back.disabled = true;
-			form.deleteDir.disabled = true;
+	form.deleteDir.addEventListener('click', function () {
+		let result = confirm("Are you sure you want to delete this directory?");
+		if (result) {
+			remove(form.pathname);
+			form.pathname = form.pathname.slice(0, form.pathname.slice(0,
+				form.pathname.length - 1).lastIndexOf('/') + 1);
+			displayPath(form, getPath(form.pathname));
+			if (form.pathname === '/') {
+				form.back.disabled = true;
+				form.deleteDir.disabled = true;
+			}
+			closeFile(form);
 		}
 	});
 
